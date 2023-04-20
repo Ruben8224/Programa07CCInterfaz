@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+<hibernate-configuration>
+	<session-factory>
+	
+   		<property name="connection.url">jdbc:postgresql://localhost:5432/ventas</property> <!-- BD Mane -->
+   		<property name="connection.driver_class">org.postgresql.Driver</property> <!-- DB Driver -->
+   		<property name="connection.username">postgres</property> <!-- DB User -->
+   		<property name="connection.password">ruben</property> <!-- DB Password -->
+   		
+   		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property> <!-- DB Dialect -->
+   		<property name="hbm2ddl.auto">update</property> <!-- create / create-drop / update -->
+		
+		<property name="show_sql">true</property> <!-- Show SQL in console -->
+		<property name="format_sql">true</property> <!-- Show SQL formatted -->
+		
+		<mapping class="org.uv.programa07cc.Venta"/>
+                <mapping class="org.uv.programa07cc.DetalleVenta"/>
+		
+	</session-factory>
+</hibernate-configuration>
